@@ -30,7 +30,8 @@ jobs:
       id-token: write
       contents: read
     runs-on: ${{ fromJSON(github.event.inputs.runs_on) }}
-    timeout-minutes: 1440
+    timeout-minutes: 10
+
     name: Terrateam Action
     environment: '${{ github.event.inputs.environment }}'
     steps:
