@@ -33,9 +33,4 @@ None so far, but I work triple time even saturday & sunday just to compensate
 
 ### TODO
 
-- study study study
-
-
-
-
-
+- study study study & study
