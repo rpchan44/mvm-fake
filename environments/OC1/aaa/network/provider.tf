@@ -7,7 +7,6 @@ terraform {
     secret_key                  = "minioadmin"
     skip_credentials_validation = true
     skip_region_validation      = true
-    skip_requesting_account_id  = true
     force_path_style            = true
     endpoint                    = "http://192.168.51.99:9000"
   }
