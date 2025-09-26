@@ -21,6 +21,8 @@ on:
         description: 'Environment in which to run the action'
         type: environment
       runs_on:
+      env:
+        TFENV_TERRAFORM_DEFAULT_VERSION: 1.13.3
         description: 'runs-on configuration'
         type: string
         default: '"ubuntu-latest"'
@@ -31,8 +33,6 @@ jobs:
       id-token: write
       contents: read
     runs-on: 'self-hosted'
-    env:
-      TFENV_TERRAFORM_DEFAULT_VERSION: 1.13.3
     timeout-minutes: 10
     name: Terrateam Action
     environment: '${{ github.event.inputs.environment }}'
