@@ -1,6 +1,5 @@
-data "terraform_remote_state" "compartment" {
-  backend = "s3"
-  config = {
+terraform {
+  backend "s3" {
     bucket                      = "terraform-states"
     key                         = "project1/terraform.tfstate"
     region                      = "us-east-1"
@@ -9,9 +8,10 @@ data "terraform_remote_state" "compartment" {
     skip_credentials_validation = true
     skip_region_validation      = true
     skip_requesting_account_id  = true
-    use_path_style            = true
+    force_path_style            = true
     endpoints = {
       s3 = "http://192.168.51.99:9000"
     }
   }
 }
+
