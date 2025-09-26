@@ -36,6 +36,8 @@ jobs:
     name: Terrateam Action
     environment: '${{ github.event.inputs.environment }}'
     steps:
+      - name: Cleanup terraform
+        run: rm -rf ~/_work/*
       - uses: actions/checkout@v4
       - name: Run Terrateam Action
         id: terrateam
