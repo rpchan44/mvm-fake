@@ -5,6 +5,6 @@ drift:
       tag_query: ''
       schedule: daily
 automerge:
-  enabled: true
+  enabled: false
   delete_branch: true
   require_explicit_apply: true
