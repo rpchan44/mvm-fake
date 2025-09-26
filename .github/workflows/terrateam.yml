@@ -24,21 +24,20 @@ on:
         description: 'runs-on configuration'
         type: string
         default: '"ubuntu-latest"'
+        
 jobs:
   terrateam:
     permissions:
       id-token: write
       contents: read
     runs-on: 'self-hosted'
+    env:
+      TFENV_TERRAFORM_DEFAULT_VERSION: 1.13.3
     timeout-minutes: 10
     name: Terrateam Action
     environment: '${{ github.event.inputs.environment }}'
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
-        with:
-          terraform_version: "1.13.3"
       - name: Run Terrateam Action
         id: terrateam
         uses: terrateamio/action@v1
