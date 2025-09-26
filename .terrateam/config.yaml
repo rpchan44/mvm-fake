@@ -1,0 +1,10 @@
+drift:
+  enabled: true
+  schedules:
+    default:
+      tag_query: ''
+      schedule: daily
+automerge:
+  enabled: true
+  delete_branch: true
+  require_explicit_apply: true
