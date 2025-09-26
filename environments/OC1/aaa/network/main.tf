@@ -3,6 +3,6 @@ module "network" {
   compartment_id  = data.terraform_remote_state.compartment.outputs.compartment_id
 
   vcn_cidr        = "192.168.100.0/24"
-  subnet_cidr     = "192.168.100.0/29" 
+  subnet_cidr     = "192.168.100.0/28" 
 
 }
