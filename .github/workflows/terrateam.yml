@@ -21,8 +21,6 @@ on:
         description: 'Environment in which to run the action'
         type: environment
       runs_on:
-      env:
-        TFENV_TERRAFORM_DEFAULT_VERSION: 1.13.3
         description: 'runs-on configuration'
         type: string
         default: '"ubuntu-latest"'
