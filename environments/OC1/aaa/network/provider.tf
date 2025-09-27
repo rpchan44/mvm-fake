@@ -9,7 +9,9 @@ terraform {
     skip_region_validation      = true
     use_path_style              = true
     skip_requesting_account_id  = true
-    endpoint                    = "http://192.168.51.99:9000" 
+    endpoints = { 
+      s3 = "http://192.168.51.99:9000" 
+    } 
   }
 }
 
